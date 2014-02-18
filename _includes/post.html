@@ -1,0 +1,14 @@
+{% if page.date %}{% assign post = page %}{% endif %}
+{% assign body = post.content %}
+{% if content %}{% assign body = content %}{% endif %}
+
+<header class="post-header">
+  <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+</header>
+<section class="post-body">
+  <div class="post-information">
+    <span class="date">{{ post.date | date_to_long_string }}</span>
+  </div>
+  {% capture my_content %}{{ body }}{% endcapture %}
+  {{ my_content | markdownify }}
+</section>

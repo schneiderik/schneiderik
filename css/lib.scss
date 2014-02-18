@@ -1,0 +1,40 @@
+$link:       #62968d;
+$link-hover: #345a53;
+$text:       #222;
+
+@mixin prefixer ($property, $value,
+                 $webkit: true,
+                    $moz: true,
+                     $ms: false,
+                      $o: false,
+                   $spec: true) {
+  @if $webkit { -webkit-#{$property}: $value; }
+  @if $moz    {    -moz-#{$property}: $value; }
+  @if $ms     {     -ms-#{$property}: $value; }
+  @if $o      {      -o-#{$property}: $value; }
+  @if $spec   {         #{$property}: $value; }
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+   }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin box-sizing ($box) {
+  @include prefixer(box-sizing, $box);
+}
+
+@mixin box-shadow ($props) {
+  @include prefixer(box-shadow, $props);
+}
+
+@mixin transition ($props...) {
+  @include prefixer(transition, $props, webkit, moz, ms, o);
+}

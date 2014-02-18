@@ -1,0 +1,396 @@
+@import url(./reset.css);
+html {
+  font-size: 137%; }
+  @media (min-width: 768px) and (max-width: 960px) {
+    html {
+      font-size: 127.41%; } }
+  @media (min-width: 540px) and (max-width: 768px) {
+    html {
+      font-size: 113.71%; } }
+  @media (max-width: 540px) {
+    html {
+      font-size: 95.9%; } }
+
+body {
+  font-family: "Droid Serif";
+  color: #222222;
+  background: #FFF;
+  line-height: 1.618rem; }
+
+img {
+  display: block;
+  width: 100%; }
+  img.circle {
+    border-radius: 50%; }
+
+p {
+  max-width: 768px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ul, ol {
+  margin-left: 1.618rem; }
+  ul li, ol li {
+    margin-top: 1.618rem; }
+  ul li:first-child, ol li:first-child {
+    margin-top: 1.618rem; }
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+img, p, ul, ol, table, code, form {
+  margin-bottom: 1.618rem; }
+  img:last-child, p:last-child, ul:last-child, ol:last-child, table:last-child, code:last-child, form:last-child {
+    margin-bottom: 0px; }
+
+#main-section {
+  width: 80%;
+  max-width: 768px;
+  margin: 3.236rem auto; }
+  @media (max-width: 768px) {
+    #main-section {
+      width: 86%;
+      margin: 1.618rem auto; } }
+  @media (max-width: 540px) {
+    #main-section {
+      width: 92%; } }
+
+.back-top, .back-bottom {
+  font-size: 0.8rem; }
+
+.back-top {
+  margin-top: -1.618rem;
+  margin-bottom: 1.618rem; }
+  @media (max-width: 768px) {
+    .back-top {
+      margin-top: -0.809rem; } }
+
+.back-bottom {
+  margin-top: 1.618rem;
+  margin-bottom: -1.618rem;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .back-bottom {
+      margin-bottom: -0.809rem; } }
+
+header.page-header {
+  position: relative;
+  margin-bottom: 1.618rem; }
+  header.page-header p {
+    padding-left: 120px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  header.page-header .portrait {
+    width: 100px;
+    border-radius: 50px;
+    position: absolute;
+    top: 0.2427rem;
+    left: -0.1618rem; }
+  @media (max-width: 768px) {
+    header.page-header p {
+      padding-left: 90px; }
+    header.page-header .portrait {
+      width: 75px; } }
+  @media (max-width: 540px) {
+    header.page-header p {
+      padding-left: 0px; }
+    header.page-header .portrait {
+      position: static;
+      margin: 0 auto 1.618rem; } }
+header.projects-header {
+  margin-bottom: 1.618rem; }
+  header.projects-header .title {
+    font-size: 0.8rem;
+    color: #AAA;
+    line-height: 1.618rem;
+    border-bottom: 1px solid #efefef; }
+header.project-header {
+  margin-bottom: 1.618rem; }
+  header.project-header .date {
+    font-weight: normal;
+    color: #AAA;
+    font-size: 0.8rem;
+    display: block; }
+header.text-header .title {
+  font-weight: bold; }
+
+article.project {
+  position: relative;
+  padding-left: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media (max-width: 540px) {
+    article.project {
+      padding-left: 40px; } }
+  article.project.zine:before {
+    background-image: url("/images/zine.jpg");
+    height: 37px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project.zine:before {
+        background-image: url("/images/zine@2x.jpg"); } }
+  article.project.comic:before {
+    background-image: url("/images/comic.jpg");
+    height: 37px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project.comic:before {
+        background-image: url("/images/comic@2x.jpg"); } }
+  article.project.code:before {
+    background-image: url("/images/code.jpg");
+    height: 41px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project.code:before {
+        background-image: url("/images/code@2x.jpg"); } }
+  article.project:before {
+    content: " ";
+    width: 50px;
+    position: absolute;
+    top: 0.2427rem;
+    left: 0;
+    display: block;
+    background-repeat: no-repeat; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project:before {
+        background-size: 50px auto; } }
+    @media (max-width: 540px) {
+      article.project:before {
+        background-size: 30px auto; } }
+
+.dot-break {
+  margin: 0.9708rem auto 2.2652rem;
+  width: 200px;
+  display: block;
+  text-align: center;
+  clear: both;
+  color: #DBDBDB;
+  letter-spacing: 0.5em; }
+
+header#story-header h1 {
+  font-size: 1.8rem;
+  line-height: 2.427rem;
+  font-weight: bold;
+  margin-bottom: 1.618rem; }
+header#story-header p {
+  margin-bottom: 1.618rem; }
+
+#erik-and-ashley #main-section {
+  max-width: 768px; }
+#erik-and-ashley .circle {
+  margin: 2.427rem auto;
+  max-width: 400px;
+  width: 80%; }
+#erik-and-ashley #chapter-1, #erik-and-ashley #chapter-2 {
+  *zoom: 1;
+  margin: 0 -0.2427rem; }
+  #erik-and-ashley #chapter-1:before, #erik-and-ashley #chapter-1:after, #erik-and-ashley #chapter-2:before, #erik-and-ashley #chapter-2:after {
+    display: table;
+    content: ""; }
+  #erik-and-ashley #chapter-1:after, #erik-and-ashley #chapter-2:after {
+    clear: both; }
+  #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
+    width: 25%;
+    max-width: 210px;
+    max-height: 290px;
+    float: left;
+    margin: 0;
+    padding: 0 0 0.4045rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 650px) {
+      #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
+        width: 33%; } }
+    @media (max-width: 460px) {
+      #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
+        width: 50%; } }
+
+#quiet-fishing-village #main-section {
+  max-width: 768px; }
+#quiet-fishing-village .chapter {
+  *zoom: 1;
+  margin: 0 -2%; }
+  #quiet-fishing-village .chapter:before, #quiet-fishing-village .chapter:after {
+    display: table;
+    content: ""; }
+  #quiet-fishing-village .chapter:after {
+    clear: both; }
+  #quiet-fishing-village .chapter img {
+    width: 51.8%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -1% 0.4045rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #quiet-fishing-village .chapter img {
+        width: 100%;
+        margin: 0 0 0.4045rem; } }
+
+#dailies-2011 #main-section {
+  max-width: 768px; }
+#dailies-2011 .chapter {
+  *zoom: 1;
+  margin: 0 -1% 1.618rem; }
+  #dailies-2011 .chapter:before, #dailies-2011 .chapter:after {
+    display: table;
+    content: ""; }
+  #dailies-2011 .chapter:after {
+    clear: both; }
+  #dailies-2011 .chapter img {
+    width: 53.9%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -2%;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #dailies-2011 .chapter img {
+        width: 100%;
+        margin: 0 0 -0.2427rem; } }
+    #dailies-2011 .chapter img.wide {
+      width: 104%;
+      max-width: 1000px; }
+      @media (max-width: 540px) {
+        #dailies-2011 .chapter img.wide {
+          width: 94.5%;
+          margin: 0 3%; } }
+    #dailies-2011 .chapter img.narrow {
+      width: 29%;
+      max-width: 250px; }
+      @media (max-width: 540px) {
+        #dailies-2011 .chapter img.narrow {
+          width: 57%;
+          margin: 0 auto;
+          float: none; } }
+
+#autobiographic-fanfiction #main-section {
+  max-width: 768px; }
+#autobiographic-fanfiction .chapter {
+  *zoom: 1;
+  margin: 0 -0.25%; }
+  #autobiographic-fanfiction .chapter:before, #autobiographic-fanfiction .chapter:after {
+    display: table;
+    content: ""; }
+  #autobiographic-fanfiction .chapter:after {
+    clear: both; }
+  #autobiographic-fanfiction .chapter img {
+    width: 49.5%;
+    max-width: 500px;
+    float: left;
+    margin: 0 0.25% 0.4045rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #autobiographic-fanfiction .chapter img {
+        width: 100%;
+        margin: 0 0 0.4045rem; } }
+
+#nice-tat #main-section {
+  max-width: 768px; }
+#nice-tat .chapter {
+  *zoom: 1;
+  margin: 0 -0.5%; }
+  #nice-tat .chapter:before, #nice-tat .chapter:after {
+    display: table;
+    content: ""; }
+  #nice-tat .chapter:after {
+    clear: both; }
+  #nice-tat .chapter img {
+    width: 50%;
+    max-width: 500px;
+    float: left;
+    margin: 0 0 0.4045rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #nice-tat .chapter img {
+        width: 100%;
+        margin: 0 0 0.4045rem; } }
+    #nice-tat .chapter img.center {
+      float: none;
+      margin: 0 auto 0.4045rem; }
+
+#whatever-happens #main-section {
+  max-width: 768px; }
+#whatever-happens .chapter {
+  *zoom: 1;
+  margin: 0 -1.1%; }
+  #whatever-happens .chapter:before, #whatever-happens .chapter:after {
+    display: table;
+    content: ""; }
+  #whatever-happens .chapter:after {
+    clear: both; }
+  #whatever-happens .chapter img {
+    width: 52.1%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -1.1% -1%;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  @media (max-width: 700px) {
+    #whatever-happens .chapter {
+      margin: 0 -4%; }
+      #whatever-happens .chapter img {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto -1%;
+        float: none; } }
+
+#toucher #main-section {
+  max-width: 768px; }
+#toucher img {
+  width: 103%;
+  max-width: 800px;
+  margin: 0 -1.5%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#thirty-days-of-comics-2013 span.date {
+  color: #AAA;
+  font-size: 0.8rem; }
+#thirty-days-of-comics-2013 .comic {
+  margin-bottom: 1.618rem; }
+
+#thanksgiving-in-paris .text-header {
+  margin: 1.618rem 0 0; }
+  #thanksgiving-in-paris .text-header + img {
+    width: 103%;
+    margin: -1% -1.5% 0.809rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+#thanksgiving-in-paris .photos {
+  width: 100%;
+  *zoom: 1; }
+  #thanksgiving-in-paris .photos:before, #thanksgiving-in-paris .photos:after {
+    display: table;
+    content: ""; }
+  #thanksgiving-in-paris .photos:after {
+    clear: both; }
+  #thanksgiving-in-paris .photos img {
+    width: 50%;
+    float: left;
+    max-width: 400px; }
+    #thanksgiving-in-paris .photos img.wide {
+      width: 100%;
+      max-width: 800px; }
+    @media (max-width: 540px) {
+      #thanksgiving-in-paris .photos img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto; } }

@@ -1,0 +1,402 @@
+@import "./reset.css";
+@import "./lib";
+
+$line-height: 1.618rem;
+$fs: 137%;
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
+
+@function lh ($num:1, $root-variance:1) {
+  @if ($root-variance != 1) {
+    @return ($line-height / $root-variance) * $num;
+  } @else {
+    @return $line-height * $num;
+  }
+}
+
+html {
+  font-size: $fs;
+  @media (min-width:768px) and (max-width:960px) { font-size: $fs * 0.93; }
+  @media (min-width:540px) and (max-width:768px) { font-size: $fs * 0.83; }
+  @media (max-width:540px) { font-size: $fs * 0.7; }
+}
+body {
+  font-family: "Droid Serif";
+  color: $text;
+  background: #FFF;
+  line-height: lh();
+}
+img {
+  display: block;
+  width: 100%;
+  &.circle {
+    border-radius: 50%;
+  }
+}
+
+p {
+  max-width: 768px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+ul, ol {
+  margin-left: lh();
+  li { margin-top: lh(); }
+  li:first-child { margin-top: lh(); }
+}
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+img, p, ul, ol, table, code, form {
+  margin-bottom: lh();
+  &:last-child { margin-bottom: 0px; }
+}
+#main-section {
+  width: 80%;
+  max-width: 768px;
+  margin: lh(2) auto;
+
+  @media (max-width: 768px) {
+    width: 86%;
+    margin: lh() auto;
+  }
+  @media (max-width: 540px) { width: 92%; }
+}
+.back-top, .back-bottom { font-size: 0.8rem; }
+.back-top {
+  margin-top: lh(-1);
+  margin-bottom: lh();
+  @media (max-width: 768px) { margin-top: lh(-0.5) }
+}
+.back-bottom {
+  margin-top: lh();
+  margin-bottom: lh(-1);
+  text-align: center;
+  @media (max-width: 768px) { margin-bottom: lh(-0.5) }
+}
+header {
+  &.page-header {
+    position: relative;
+    margin-bottom: lh();
+    p {
+      padding-left: 120px;
+      @include box-sizing(border-box);
+    }
+    .portrait {
+      width: 100px;
+      border-radius: 50px;
+      position: absolute;
+      top: lh(0.15);
+      left: lh(-0.1);
+    }
+    @media (max-width: 768px) {
+      p { padding-left: 90px; }
+      .portrait { width: 75px; }
+    }
+    @media (max-width: 540px) {
+      p { padding-left: 0px; }
+      .portrait {
+        position: static;
+        margin: 0 auto lh();
+      }
+    }
+  }
+  &.projects-header {
+    margin-bottom: lh();
+    .title {
+      font-size: 0.8rem;
+      color: #AAA;
+      line-height: lh();
+      border-bottom: 1px solid #efefef;
+    }
+  }
+  &.project-header {
+    margin-bottom: lh();
+    .date {
+      font-weight: normal;
+      color: #AAA;
+      font-size: 0.8rem;
+      display: block;
+    }
+  }
+  &.text-header {
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+article {
+  &.project {
+    position: relative;
+    padding-left: 65px;
+    @include box-sizing(border-box);
+    @media (max-width: 540px) { padding-left: 40px; }
+    &.zine {
+      &:before {
+        background-image: url('/images/zine.jpg');
+        height: 37px;
+        @media #{$retina} { background-image: url('/images/zine@2x.jpg'); }
+      }
+    }
+    &.comic {
+      &:before {
+        background-image: url('/images/comic.jpg');
+        height: 37px;
+        @media #{$retina} { background-image: url('/images/comic@2x.jpg'); }
+      }
+    }
+    &.code {
+      &:before {
+        background-image: url('/images/code.jpg');
+        height: 41px;
+        @media #{$retina} { background-image: url('/images/code@2x.jpg'); }
+      }
+    }
+    &:before {
+      content: " ";
+      width: 50px;
+      position: absolute;
+      top: lh(0.15);
+      left: 0;
+      display: block;
+      background-repeat: no-repeat;
+      @media #{$retina} { background-size: 50px auto; }
+      @media (max-width: 540px) { background-size: 30px auto; }
+    }
+  }
+}
+.dot-break {
+  margin: lh(0.6) auto lh(1.4);
+  width: 200px;
+  display: block;
+  text-align: center;
+  clear: both;
+  color: #DBDBDB;
+  letter-spacing: 0.5em;
+}
+header#story-header {
+  h1 {
+    font-size: 1.8rem;
+    line-height: lh(1.5);
+    font-weight: bold;
+    margin-bottom: lh();
+  }
+  p { margin-bottom: lh(); }
+}
+
+#erik-and-ashley {
+  #main-section {
+    max-width: 768px;
+  }
+  .circle {
+    margin: lh(1.5) auto;
+    max-width: 400px;
+    width: 80%;
+  }
+  #chapter-1, #chapter-2 {
+    @include clearfix;
+    margin: 0 lh(-0.15);
+    img {
+      width: 25%;
+      max-width: 210px;
+      max-height: 290px;
+      float: left;
+      margin: 0;
+      padding: 0 0 lh(0.25);
+      @include box-sizing(border-box);
+      @media (max-width: 650px) { width: 33%; }
+      @media (max-width: 460px) { width: 50%; }
+    }
+  }
+}
+
+#quiet-fishing-village {
+  #main-section {
+    max-width: 768px;
+  }
+  .chapter {
+    @include clearfix;
+    margin: 0 -2%;
+    img {
+      width: 51.8%;
+      max-width: 500px;
+      float: left;
+      margin: 0 -1% lh(0.25);
+      padding: 0;
+      @include box-sizing(border-box);
+      @media (max-width: 540px) {
+        width: 100%;
+        margin: 0 0 lh(0.25);
+      }
+    }
+  }
+}
+
+#dailies-2011 {
+  #main-section {
+    max-width: 768px;
+  }
+  .chapter {
+    @include clearfix;
+    margin: 0 -1% lh();
+    img {
+      width: 53.9%;
+      max-width: 500px;
+      float: left;
+      margin: 0 -2%;
+      padding: 0;
+      @include box-sizing(border-box);
+      @media (max-width: 540px) {
+        width: 100%;
+        margin: 0 0 lh(-0.15);
+      }
+      &.wide {
+        width: 104%;
+        max-width: 1000px;
+        @media (max-width: 540px) {
+          width: 94.5%;
+          margin: 0 3%;
+        }
+        
+      }
+      &.narrow {
+        width: 29%;
+        max-width: 250px;
+        @media (max-width: 540px) {
+          width: 57%;
+          margin: 0 auto;
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+#autobiographic-fanfiction {
+  #main-section {
+    max-width: 768px;
+  }
+  .chapter {
+    @include clearfix;
+    margin: 0 -0.25%;
+    img {
+      width: 49.5%;
+      max-width: 500px;
+      float: left;
+      margin: 0 0.25% lh(0.25);
+      padding: 0;
+      @include box-sizing(border-box);
+      @media (max-width: 540px) {
+        width: 100%;
+        margin: 0 0 lh(0.25);
+      }
+    }
+  }
+}
+
+#nice-tat {
+  #main-section {
+    max-width: 768px;
+  }
+  .chapter {
+    @include clearfix;
+    margin: 0 -0.5%;
+    img {
+      width: 50%;
+      max-width: 500px;
+      float: left;
+      margin: 0 0 lh(0.25);
+      padding: 0;
+      @include box-sizing(border-box);
+      @media (max-width: 540px) {
+        width: 100%;
+        margin: 0 0 lh(0.25);
+      }
+      &.center {
+        float: none;
+        margin: 0 auto lh(0.25);
+      }
+    }
+  }
+}
+
+#whatever-happens {
+  #main-section {
+    max-width: 768px;
+  }
+  .chapter {
+    @include clearfix;
+    margin: 0 -1.1%;
+    img {
+      width: 52.1%;
+      max-width: 500px;
+      float: left;
+      margin: 0 -1.1% -1%;
+      padding: 0;
+      @include box-sizing(border-box);
+    }
+    @media (max-width: 700px) {
+      margin: 0 -4%;
+      img {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto -1%;
+        float: none;
+      }
+    }
+  }
+}
+
+#toucher {
+  #main-section {
+    max-width: 768px;
+  }
+  img {
+    width: 103%;
+    max-width: 800px;
+    margin: 0 -1.5%;
+    padding: 0;
+    @include box-sizing(border-box);
+  }
+}
+
+#thirty-days-of-comics-2013 {
+  span.date {
+    color: #AAA;
+    font-size: 0.8rem; 
+  }
+  .comic {
+    margin-bottom: lh();
+  }
+}
+
+#thanksgiving-in-paris {
+  .text-header {
+    margin: lh() 0 0;
+    & + img {
+      width: 103%;
+      margin: -1% -1.5% lh(0.5) ;
+      padding: 0;
+      @include box-sizing(border-box);
+    }
+  }
+  .photos {
+    width: 100%;
+    @include clearfix;
+    img {
+      width: 50%;
+      float: left;
+      max-width: 400px;
+      &.wide {
+        width: 100%;
+        max-width: 800px;
+      }
+      @media (max-width:540px) {
+        width: 100%; 
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

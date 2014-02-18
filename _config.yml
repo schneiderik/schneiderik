@@ -1,0 +1,5 @@
+paginate: 10
+permalink: pretty
+name: schneiderik
+description: The blog of Erik Schneider
+pygments: true
