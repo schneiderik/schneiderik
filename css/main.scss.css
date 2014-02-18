@@ -71,9 +71,18 @@ img, p, ul, ol, table, code, form {
 }
 .back-bottom {
   margin-top: lh();
-  margin-bottom: lh(-1);
   text-align: center;
+  margin-bottom: lh(-1);
   @media (max-width: 768px) { margin-bottom: lh(-0.5) }
+}
+footer {
+  &#main-footer {
+    font-size: 0.8rem;
+    margin-top: lh(2);
+    margin-bottom: lh();
+    text-align: center;
+    color: #AAA;
+  }
 }
 header {
   &.page-header {
