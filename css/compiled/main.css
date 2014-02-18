@@ -23,13 +23,19 @@ img {
   img.circle {
     border-radius: 50%; }
 
+div {
+  line-height: 1.618rem; }
+
 p {
-  max-width: 768px; }
+  max-width: 768px;
+  line-height: 1.618rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  font-weight: normal;
+  line-height: 1.618rem; }
 
 ul, ol {
+  line-height: 1.618rem;
   margin-left: 1.618rem; }
   ul li, ol li {
     margin-top: 1.618rem; }
@@ -37,9 +43,11 @@ ul, ol {
     margin-top: 1.618rem; }
 
 a {
+  line-height: 1.618rem;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 img, p, ul, ol, table, code, form {
+  line-height: 1.618rem;
   margin-bottom: 1.618rem; }
   img:last-child, p:last-child, ul:last-child, ol:last-child, table:last-child, code:last-child, form:last-child {
     margin-bottom: 0px; }

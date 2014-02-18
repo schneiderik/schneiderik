@@ -32,23 +32,30 @@ img {
     border-radius: 50%;
   }
 }
-
+div {
+  line-height: lh();
+}
 p {
   max-width: 768px;
+  line-height: lh();
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  line-height: lh();
 }
 ul, ol {
+  line-height: lh();
   margin-left: lh();
   li { margin-top: lh(); }
   li:first-child { margin-top: lh(); }
 }
 a {
+  line-height: lh();
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 img, p, ul, ol, table, code, form {
+  line-height: lh();
   margin-bottom: lh();
   &:last-child { margin-bottom: 0px; }
 }
