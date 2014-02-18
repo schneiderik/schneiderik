@@ -3,4 +3,4 @@ permalink: pretty
 name: schneiderik
 description: The blog of Erik Schneider
 pygments: true
-exlude: [vendor]
+exlude: ['vendor']
