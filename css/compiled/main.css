@@ -127,6 +127,7 @@ header.project-header {
     font-weight: normal;
     color: #AAA;
     font-size: 0.8rem;
+    line-height: 1.618rem;
     display: block; }
 header.text-header .title {
   font-weight: bold; }

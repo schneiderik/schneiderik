@@ -133,6 +133,7 @@ header {
       font-weight: normal;
       color: #AAA;
       font-size: 0.8rem;
+      line-height: lh();
       display: block;
     }
   }
