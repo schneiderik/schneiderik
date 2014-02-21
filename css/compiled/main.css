@@ -143,19 +143,31 @@ article.project {
       padding-left: 40px; } }
   article.project.zine:before {
     background-image: url("/images/zine.jpg");
-    height: 37px; }
+    height: 46px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       article.project.zine:before {
         background-image: url("/images/zine@2x.jpg"); } }
+  article.project.illustration:before {
+    background-image: url("/images/illustration.jpg");
+    height: 46px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project.illustration:before {
+        background-image: url("/images/illustration@2x.jpg"); } }
+  article.project.game:before {
+    background-image: url("/images/game.jpg");
+    height: 46px; }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      article.project.game:before {
+        background-image: url("/images/game@2x.jpg"); } }
   article.project.comic:before {
     background-image: url("/images/comic.jpg");
-    height: 37px; }
+    height: 40px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       article.project.comic:before {
         background-image: url("/images/comic@2x.jpg"); } }
   article.project.code:before {
     background-image: url("/images/code.jpg");
-    height: 41px; }
+    height: 42px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       article.project.code:before {
         background-image: url("/images/code@2x.jpg"); } }

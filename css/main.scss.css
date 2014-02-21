@@ -152,21 +152,35 @@ article {
     &.zine {
       &:before {
         background-image: url('/images/zine.jpg');
-        height: 37px;
+        height: 46px;
         @media #{$retina} { background-image: url('/images/zine@2x.jpg'); }
+      }
+    }
+    &.illustration {
+      &:before {
+        background-image: url('/images/illustration.jpg');
+        height: 46px;
+        @media #{$retina} { background-image: url('/images/illustration@2x.jpg'); }
+      }
+    }
+    &.game {
+      &:before {
+        background-image: url('/images/game.jpg');
+        height: 46px;
+        @media #{$retina} { background-image: url('/images/game@2x.jpg'); }
       }
     }
     &.comic {
       &:before {
         background-image: url('/images/comic.jpg');
-        height: 37px;
+        height: 40px;
         @media #{$retina} { background-image: url('/images/comic@2x.jpg'); }
       }
     }
     &.code {
       &:before {
         background-image: url('/images/code.jpg');
-        height: 41px;
+        height: 42px;
         @media #{$retina} { background-image: url('/images/code@2x.jpg'); }
       }
     }
