@@ -28,5 +28,51 @@
     <footer id="main-footer">
       &copy; 2014 Erik Schneider
     </footer>
+    <script>
+      var nav_items = document.querySelectorAll('nav a');
+
+      var addClass = function(el, className) {
+        if (el.classList)
+          el.classList.add(className);
+        else
+          el.className += ' ' + className;
+      }
+
+      var removeClass = function(el, className) {
+        if (el.classList)
+          el.classList.remove(className);
+        else
+          el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+      }
+
+      var filterProjects = function(className) {
+        var all_projects = document.querySelectorAll('#projects .project');
+        if (className == 'all') {
+          Array.prototype.forEach.call(all_projects, function(project, i){
+            removeClass(project, 'hidden');
+          });
+        } else {
+          var projects = document.querySelectorAll('#projects .project.' + className);
+          Array.prototype.forEach.call(all_projects, function(project, i){
+            addClass(project, 'hidden');
+          });
+          Array.prototype.forEach.call(projects, function(project, i){
+            removeClass(project, 'hidden');
+          });
+        }
+      }
+
+      var navClick = function(e) {
+        e.preventDefault();
+        var active_nav_items = document.querySelectorAll('nav a.active');
+        removeClass(active_nav_items[0], 'active');
+        addClass(e.target, 'active');
+        filterProjects(e.target.getAttribute('href'));
+      }
+
+      Array.prototype.forEach.call(nav_items, function(item, i){
+        item.addEventListener('click', navClick);
+      });
+    </script>
   </body>
 </html>

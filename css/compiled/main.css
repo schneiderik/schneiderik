@@ -89,6 +89,15 @@ footer#main-footer {
   text-align: center;
   color: #AAA; }
 
+nav {
+  float: right; }
+  nav a {
+    font-size: 0.8rem;
+    line-height: 1.618rem;
+    margin-left: 0.4045rem; }
+    nav a.active {
+      color: red; }
+
 header.page-header {
   position: relative;
   margin-bottom: 1.618rem; }
@@ -115,12 +124,19 @@ header.page-header {
       position: static;
       margin: 0 auto 1.618rem; } }
 header.projects-header {
-  margin-bottom: 1.618rem; }
+  margin-bottom: 1.618rem;
+  border-bottom: 1px solid #efefef;
+  *zoom: 1; }
+  header.projects-header:before, header.projects-header:after {
+    display: table;
+    content: ""; }
+  header.projects-header:after {
+    clear: both; }
   header.projects-header .title {
     font-size: 0.8rem;
     color: #AAA;
     line-height: 1.618rem;
-    border-bottom: 1px solid #efefef; }
+    float: left; }
 header.project-header {
   margin-bottom: 1.618rem; }
   header.project-header .date {
@@ -141,6 +157,8 @@ article.project {
   @media (max-width: 540px) {
     article.project {
       padding-left: 40px; } }
+  article.project.hidden {
+    display: none; }
   article.project.zine:before {
     background-image: url("/images/zine.jpg");
     height: 46px; }

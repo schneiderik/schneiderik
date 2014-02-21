@@ -91,6 +91,15 @@ footer {
     color: #AAA;
   }
 }
+nav {
+  float: right;
+  a {
+    font-size: 0.8rem;
+    line-height: lh();
+    margin-left: lh(0.25); 
+    &.active { color: red ; }
+  }
+}
 header {
   &.page-header {
     position: relative;
@@ -120,11 +129,13 @@ header {
   }
   &.projects-header {
     margin-bottom: lh();
+    border-bottom: 1px solid #efefef;
+    @include clearfix;
     .title {
       font-size: 0.8rem;
       color: #AAA;
       line-height: lh();
-      border-bottom: 1px solid #efefef;
+      float: left;
     }
   }
   &.project-header {
@@ -149,6 +160,7 @@ article {
     padding-left: 65px;
     @include box-sizing(border-box);
     @media (max-width: 540px) { padding-left: 40px; }
+    &.hidden { display: none; }
     &.zine {
       &:before {
         background-image: url('/images/zine.jpg');
