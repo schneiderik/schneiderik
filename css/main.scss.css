@@ -13,6 +13,10 @@ $retina: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and
   }
 }
 
+$link: rgb(0, 0, 238);
+$visited: rgb(85, 26, 139);
+$active: darken(rgb(0, 0, 238), 15%);
+
 html {
   font-size: $fs;
   @media (min-width:768px) and (max-width:960px) { font-size: $fs * 0.93; }
@@ -53,6 +57,8 @@ ul, ol {
 a {
   line-height: lh();
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  &:visited { color: $visited; }
+  &:active { color: $active; }
 }
 img, p, ul, ol, table, code, form {
   line-height: lh();
@@ -97,7 +103,11 @@ nav {
     font-size: 0.8rem;
     line-height: lh();
     margin-left: lh(0.25); 
-    &.active { color: red ; }
+    &.active {
+      color: #333;
+      text-decoration: none;
+      cursor: default;
+    }
   }
 }
 header {

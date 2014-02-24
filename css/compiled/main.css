@@ -45,6 +45,10 @@ ul, ol {
 a {
   line-height: 1.618rem;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  a:visited {
+    color: #551a8b; }
+  a:active {
+    color: #0000a2; }
 
 img, p, ul, ol, table, code, form {
   line-height: 1.618rem;
@@ -96,7 +100,9 @@ nav {
     line-height: 1.618rem;
     margin-left: 0.4045rem; }
     nav a.active {
-      color: red; }
+      color: #333;
+      text-decoration: none;
+      cursor: default; }
 
 header.page-header {
   position: relative;
