@@ -29,7 +29,11 @@
       &copy; 2014 Erik Schneider
     </footer>
     <script>
-      var nav_items = document.querySelectorAll('nav a');
+      var eachItem = function(items, callback) {
+        Array.prototype.forEach.call(items, function(item, i){
+          callback(item);
+        });
+      }
 
       var addClass = function(el, className) {
         if (el.classList)
@@ -45,32 +49,45 @@
           el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
       }
 
+      var getProjects = function(className) {
+        if (! className)
+          var selector = "#projects .project"
+        else
+          var selector = "#projects .project." + className
+        return document.querySelectorAll(selector);
+      }
+
+      var showProjects = function(projects) {
+        eachItem(projects, function(project, i){
+          removeClass(project, 'hidden');
+        });
+
+      }
+
+      var hideProjects = function(projects) {
+        eachItem(projects, function(project, i){
+          addClass(project, 'hidden');
+        });
+      }
+
       var filterProjects = function(className) {
-        var all_projects = document.querySelectorAll('#projects .project');
-        if (className == 'all') {
-          Array.prototype.forEach.call(all_projects, function(project, i){
-            removeClass(project, 'hidden');
-          });
-        } else {
-          var projects = document.querySelectorAll('#projects .project.' + className);
-          Array.prototype.forEach.call(all_projects, function(project, i){
-            addClass(project, 'hidden');
-          });
-          Array.prototype.forEach.call(projects, function(project, i){
-            removeClass(project, 'hidden');
-          });
-        }
+        if (className == 'all')
+          showProjects(getProjects());
+        else
+          hideProjects(getProjects());
+          showProjects(getProjects(className))
       }
 
       var navClick = function(e) {
         e.preventDefault();
-        var active_nav_items = document.querySelectorAll('nav a.active');
-        removeClass(active_nav_items[0], 'active');
+        var active_item = document.querySelectorAll('nav a.active')[0];
+        removeClass(active_item, 'active');
         addClass(e.target, 'active');
         filterProjects(e.target.getAttribute('href'));
       }
 
-      Array.prototype.forEach.call(nav_items, function(item, i){
+      var nav_items = document.querySelectorAll('nav a');
+      eachItem(nav_items, function(item) {
         item.addEventListener('click', navClick);
       });
     </script>
