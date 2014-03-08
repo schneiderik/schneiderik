@@ -446,3 +446,33 @@ header#story-header p {
         width: 100%;
         margin-left: auto;
         margin-right: auto; } }
+
+#to-do .chapter {
+  *zoom: 1;
+  margin: 0 -6%; }
+  #to-do .chapter:before, #to-do .chapter:after {
+    display: table;
+    content: ""; }
+  #to-do .chapter:after {
+    clear: both; }
+  @media (max-width: 540px) {
+    #to-do .chapter {
+      margin: 0; } }
+  #to-do .chapter img {
+    width: 51.1%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -0.6% 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #to-do .chapter img {
+        width: 100%;
+        margin: 0; } }
+    #to-do .chapter img.center {
+      float: none;
+      clear: both;
+      max-width: 320px;
+      margin: 0 auto 0.4045rem; }

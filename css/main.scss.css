@@ -453,3 +453,30 @@ header#story-header {
     }
   }
 }
+#to-do {
+  .chapter {
+    @include clearfix;
+    margin: 0 -6%;
+    @media (max-width: 540px) {
+      margin: 0;
+    }
+    img {
+      width: 51.1%;
+      max-width: 500px;
+      float: left;
+      margin: 0 -0.6% 0;
+      padding: 0;
+      @include box-sizing(border-box);
+      @media (max-width: 540px) {
+        width: 100%;
+        margin: 0;
+      }
+      &.center {
+        float: none;
+        clear: both;
+        max-width: 320px;
+        margin: 0 auto lh(0.25);
+      }
+    }
+  }
+}
