@@ -476,3 +476,16 @@ header#story-header p {
       clear: both;
       max-width: 320px;
       margin: 0 auto 0.4045rem; }
+
+#benchprep img {
+  max-width: 1200px;
+  width: 140%;
+  margin: 0 -20% 1.618rem; }
+  @media (max-width: 1200px) {
+    #benchprep img {
+      width: 120%;
+      margin: 0 -10% 1.618rem; } }
+  @media (max-width: 960px) {
+    #benchprep img {
+      width: 100%;
+      margin: 0 0 1.618rem; } }

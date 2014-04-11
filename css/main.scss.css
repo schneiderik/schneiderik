@@ -102,7 +102,7 @@ nav {
   a {
     font-size: 0.8rem;
     line-height: lh();
-    margin-left: lh(0.25); 
+    margin-left: lh(0.25);
     &.active {
       color: #333;
       text-decoration: none;
@@ -311,7 +311,7 @@ header#story-header {
           width: 94.5%;
           margin: 0 3%;
         }
-        
+
       }
       &.narrow {
         width: 29%;
@@ -417,7 +417,7 @@ header#story-header {
 #thirty-days-of-comics-2013 {
   span.date {
     color: #AAA;
-    font-size: 0.8rem; 
+    font-size: 0.8rem;
   }
   .comic {
     margin-bottom: lh();
@@ -446,7 +446,7 @@ header#story-header {
         max-width: 800px;
       }
       @media (max-width:540px) {
-        width: 100%; 
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
       }
@@ -477,6 +477,22 @@ header#story-header {
         max-width: 320px;
         margin: 0 auto lh(0.25);
       }
+    }
+  }
+}
+
+#benchprep {
+  img {
+    max-width: 1200px;
+    width: 140%;
+    margin: 0 -20% lh();
+    @media (max-width: 1200px) {
+      width: 120%;
+      margin: 0 -10% lh();
+    }
+    @media (max-width: 960px) {
+      width: 100%;
+      margin: 0 0 lh();
     }
   }
 }
