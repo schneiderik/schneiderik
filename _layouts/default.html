@@ -26,9 +26,11 @@
       {{ content }}
     </section>
     <footer id="main-footer">
-      &copy; 2014 Erik Schneider
+      &copy; <script>document.write(new Date().getFullYear());</script> Erik Schneider
     </footer>
     <script>
+      var selector = '#items' + ' article';
+
       var eachItem = function(items, callback) {
         Array.prototype.forEach.call(items, function(item, i){
           callback(item);
@@ -43,39 +45,35 @@
       }
 
       var removeClass = function(el, className) {
-        if (el.classList)
+        if (el !== undefined && el.classList !== undefined) {
           el.classList.remove(className);
-        else
+        } else if (el !== undefined) {
           el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
       }
 
-      var getProjects = function(className) {
-        if (! className)
-          var selector = "#projects .project"
-        else
-          var selector = "#projects .project." + className
+      var getItems = function(className) {
+        if (className !== undefined)
+          selector += '.' + className
         return document.querySelectorAll(selector);
       }
 
-      var showProjects = function(projects) {
-        eachItem(projects, function(project, i){
-          removeClass(project, 'hidden');
+      var showItems = function(items) {
+        eachItem(items, function(item, i){
+          removeClass(item, 'hidden');
         });
 
       }
 
-      var hideProjects = function(projects) {
-        eachItem(projects, function(project, i){
-          addClass(project, 'hidden');
+      var hideItems = function(items) {
+        eachItem(items, function(item, i){
+          addClass(item, 'hidden');
         });
       }
 
-      var filterProjects = function(className) {
-        if (className == 'all')
-          showProjects(getProjects());
-        else
-          hideProjects(getProjects());
-          showProjects(getProjects(className))
+      var filterItems = function(className) {
+        hideItems(getItems());
+        showItems(getItems(className))
       }
 
       var navClick = function(e) {
@@ -83,7 +81,7 @@
         var active_item = document.querySelectorAll('nav a.active')[0];
         removeClass(active_item, 'active');
         addClass(e.target, 'active');
-        filterProjects(e.target.getAttribute('href'));
+        filterItems(e.target.getAttribute('href'));
       }
 
       var nav_items = document.querySelectorAll('nav a');
