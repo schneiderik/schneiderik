@@ -44,7 +44,7 @@ ul, ol {
 
 a {
   line-height: 1.618rem;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
   a:visited {
     color: #551a8b; }
   a:active {
@@ -86,7 +86,7 @@ img, p, ul, ol, table, code, form {
     .back-bottom {
       margin-bottom: -0.809rem; } }
 
-footer#main-footer {
+#main-footer {
   font-size: 0.8rem;
   margin-top: 3.236rem;
   margin-bottom: 1.618rem;
@@ -104,98 +104,100 @@ nav {
       text-decoration: none;
       cursor: default; }
 
-header.page-header {
+#page-header {
   position: relative;
   margin-bottom: 1.618rem; }
-  header.page-header p {
+  #page-header p {
     padding-left: 120px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  header.page-header .portrait {
+  #page-header .portrait {
     width: 100px;
     border-radius: 50px;
     position: absolute;
     top: 0.2427rem;
     left: -0.1618rem; }
   @media (max-width: 768px) {
-    header.page-header p {
+    #page-header p {
       padding-left: 90px; }
-    header.page-header .portrait {
+    #page-header .portrait {
       width: 75px; } }
   @media (max-width: 540px) {
-    header.page-header p {
+    #page-header p {
       padding-left: 0px; }
-    header.page-header .portrait {
+    #page-header .portrait {
       position: static;
       margin: 0 auto 1.618rem; } }
-header.projects-header {
+
+#items-header {
   margin-bottom: 1.618rem;
   border-bottom: 1px solid #efefef;
   *zoom: 1; }
-  header.projects-header:before, header.projects-header:after {
+  #items-header:before, #items-header:after {
     display: table;
     content: ""; }
-  header.projects-header:after {
+  #items-header:after {
     clear: both; }
-  header.projects-header .title {
+  #items-header .title {
     font-size: 0.8rem;
     color: #AAA;
     line-height: 1.618rem;
     float: left; }
-header.project-header {
-  margin-bottom: 1.618rem; }
-  header.project-header .date {
-    font-weight: normal;
-    color: #AAA;
-    font-size: 0.8rem;
-    line-height: 1.618rem;
-    display: block; }
-header.text-header .title {
+
+.text-header .title {
   font-weight: bold; }
 
-article.project {
+#items article {
   position: relative;
   padding-left: 65px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
   @media (max-width: 540px) {
-    article.project {
+    #items article {
       padding-left: 40px; } }
-  article.project.hidden {
+  #items article header {
+    margin-bottom: 1.618rem; }
+    #items article header .date {
+      font-weight: normal;
+      color: #AAA;
+      font-size: 0.8rem;
+      line-height: 1.618rem;
+      display: block; }
+  #items article.hidden {
     display: none; }
-  article.project.zine:before {
+  #items article.zine:before {
     background-image: url("/images/zine.jpg");
     height: 46px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.zine:before {
+      #items article.zine:before {
         background-image: url("/images/zine@2x.jpg"); } }
-  article.project.illustration:before {
+  #items article.illustration:before {
     background-image: url("/images/illustration.jpg");
     height: 46px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.illustration:before {
+      #items article.illustration:before {
         background-image: url("/images/illustration@2x.jpg"); } }
-  article.project.game:before {
+  #items article.game:before {
     background-image: url("/images/game.jpg");
     height: 46px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.game:before {
+      #items article.game:before {
         background-image: url("/images/game@2x.jpg"); } }
-  article.project.comic:before {
+  #items article.comic:before {
     background-image: url("/images/comic.jpg");
     height: 40px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.comic:before {
+      #items article.comic:before {
         background-image: url("/images/comic@2x.jpg"); } }
-  article.project.code:before {
+  #items article.code:before {
     background-image: url("/images/code.jpg");
     height: 42px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.code:before {
+      #items article.code:before {
         background-image: url("/images/code@2x.jpg"); } }
-  article.project:before {
+  #items article:before {
     content: " ";
     width: 50px;
     position: absolute;
@@ -204,10 +206,10 @@ article.project {
     display: block;
     background-repeat: no-repeat; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project:before {
+      #items article:before {
         background-size: 50px auto; } }
     @media (max-width: 540px) {
-      article.project:before {
+      #items article:before {
         background-size: 30px auto; } }
 
 .dot-break {
@@ -219,12 +221,12 @@ article.project {
   color: #DBDBDB;
   letter-spacing: 0.5em; }
 
-header#story-header h1 {
+#story-header h1 {
   font-size: 1.8rem;
   line-height: 2.427rem;
   font-weight: bold;
   margin-bottom: 1.618rem; }
-header#story-header p {
+#story-header p {
   margin-bottom: 1.618rem; }
 
 #erik-and-ashley #main-section {
