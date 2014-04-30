@@ -29,8 +29,6 @@
       &copy; <script>document.write(new Date().getFullYear());</script> Erik Schneider
     </footer>
     <script>
-      var selector = '#items' + ' article';
-
       var eachItem = function(items, callback) {
         Array.prototype.forEach.call(items, function(item, i){
           callback(item);
@@ -53,6 +51,7 @@
       }
 
       var getItems = function(className) {
+        var selector = '#items' + ' article';
         if (className !== undefined)
           selector += '.' + className
         return document.querySelectorAll(selector);
@@ -72,8 +71,11 @@
       }
 
       var filterItems = function(className) {
-        hideItems(getItems());
-        showItems(getItems(className))
+        if (className == 'all')
+          showItems(getItems());
+        else
+          hideItems(getItems());
+          showItems(getItems(className))
       }
 
       var navClick = function(e) {
