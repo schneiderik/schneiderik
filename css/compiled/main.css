@@ -22,6 +22,10 @@ img {
   width: 100%; }
   img.circle {
     border-radius: 50%; }
+  img.centered {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto; }
 
 div {
   line-height: 1.618rem; }
@@ -86,6 +90,9 @@ img, p, ul, ol, table, code, form {
     .back-bottom {
       margin-bottom: -0.809rem; } }
 
+.hidden {
+  display: none; }
+
 footer#main-footer {
   font-size: 0.8rem;
   margin-top: 3.236rem;
@@ -94,15 +101,47 @@ footer#main-footer {
   color: #AAA; }
 
 nav {
-  float: right; }
-  nav a {
-    font-size: 0.8rem;
-    line-height: 1.618rem;
-    margin-left: 0.4045rem; }
-    nav a.active {
-      color: #333;
+  *zoom: 1; }
+  nav:before, nav:after {
+    display: table;
+    content: ""; }
+  nav:after {
+    clear: both; }
+  nav.tabs {
+    margin-bottom: 1.618rem;
+    padding-left: 2px;
+    border-bottom: 1px solid #dbdbdb; }
+    nav.tabs a {
+      position: relative;
       text-decoration: none;
-      cursor: default; }
+      font-size: 0.8rem;
+      color: #CCC;
+      line-height: 1.618rem;
+      float: left;
+      padding: 0 0.809rem;
+      margin: 0 2px -1px;
+      background: #FFF;
+      border: 1px solid #efefef;
+      border-radius: 3px 3px 0 0;
+      z-index: 1; }
+      nav.tabs a.active {
+        border-color: #DBDBDB;
+        border-bottom-color: #FFF;
+        color: #333;
+        cursor: default;
+        z-index: 2; }
+      nav.tabs a:not(.active) {
+        border-color: #EFEFEF;
+        border-bottom-color: #DBDBDB; }
+        nav.tabs a:not(.active):hover {
+          color: #AAA;
+          border-color: #E2E2E2;
+          border-bottom-color: #DBDBDB; }
+
+.tab-content {
+  display: none; }
+  .tab-content.active {
+    display: block; }
 
 header.page-header {
   position: relative;
@@ -150,7 +189,11 @@ header.project-header {
     color: #AAA;
     font-size: 0.8rem;
     line-height: 1.618rem;
-    display: block; }
+    display: inline-block; }
+  header.project-header form {
+    margin-left: 0.4045rem; }
+    header.project-header form, header.project-header form input {
+      display: inline-block; }
 header.text-header .title {
   font-weight: bold; }
 
@@ -209,6 +252,9 @@ article.project {
     @media (max-width: 540px) {
       article.project:before {
         background-size: 30px auto; } }
+
+#cart form {
+  float: right; }
 
 .dot-break {
   margin: 0.9708rem auto 2.2652rem;
@@ -477,15 +523,26 @@ header#story-header p {
       max-width: 320px;
       margin: 0 auto 0.4045rem; }
 
-#benchprep img {
-  max-width: 1200px;
-  width: 140%;
-  margin: 0 -20% 1.618rem; }
-  @media (max-width: 1200px) {
-    #benchprep img {
-      width: 120%;
-      margin: 0 -10% 1.618rem; } }
-  @media (max-width: 960px) {
-    #benchprep img {
-      width: 100%;
-      margin: 0 0 1.618rem; } }
+#profile-home #book-contents {
+  *zoom: 1;
+  margin: 0 -3.236rem; }
+  #profile-home #book-contents:before, #profile-home #book-contents:after {
+    display: table;
+    content: ""; }
+  #profile-home #book-contents:after {
+    clear: both; }
+  @media (max-width: 540px) {
+    #profile-home #book-contents {
+      margin: 0; } }
+  #profile-home #book-contents img {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0 0.809rem 1.618rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      #profile-home #book-contents img {
+        width: 100%;
+        margin: 0; } }

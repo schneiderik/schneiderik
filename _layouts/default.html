@@ -28,6 +28,7 @@
     <footer id="main-footer">
       &copy; 2014 Erik Schneider
     </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
     <script>
       var eachItem = function(items, callback) {
         Array.prototype.forEach.call(items, function(item, i){
@@ -49,47 +50,30 @@
           el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
       }
 
-      var getProjects = function(className) {
-        if (! className)
-          var selector = "#projects .project"
-        else
-          var selector = "#projects .project." + className
-        return document.querySelectorAll(selector);
-      }
-
-      var showProjects = function(projects) {
-        eachItem(projects, function(project, i){
-          removeClass(project, 'hidden');
+      var toggleContent = function(selector) {
+        var tabContents = document.querySelectorAll('.tab-content');
+        eachItem(tabContents, function(item) {
+          removeClass(item, 'active');
         });
 
+        var targetContent = document.querySelectorAll(selector)[0];
+        addClass(targetContent, 'active');
       }
 
-      var hideProjects = function(projects) {
-        eachItem(projects, function(project, i){
-          addClass(project, 'hidden');
-        });
-      }
-
-      var filterProjects = function(className) {
-        if (className == 'all')
-          showProjects(getProjects());
-        else
-          hideProjects(getProjects());
-          showProjects(getProjects(className))
-      }
-
-      var navClick = function(e) {
+      var tabClick = function(e) {
         e.preventDefault();
-        var active_item = document.querySelectorAll('nav a.active')[0];
+        var active_item = document.querySelectorAll('nav.tabs a.active')[0];
         removeClass(active_item, 'active');
         addClass(e.target, 'active');
-        filterProjects(e.target.getAttribute('href'));
+        toggleContent(e.target.getAttribute('href'));
       }
 
-      var nav_items = document.querySelectorAll('nav a');
-      eachItem(nav_items, function(item) {
-        item.addEventListener('click', navClick);
+      var nav_tabs = document.querySelectorAll('nav.tabs a');
+      eachItem(nav_tabs, function(item) {
+        item.addEventListener('click', tabClick);
       });
+
+      paypal.minicart.render();
     </script>
   </body>
 </html>
