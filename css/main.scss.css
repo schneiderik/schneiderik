@@ -81,11 +81,20 @@ img, p, ul, ol, table, code, form {
   }
   @media (max-width: 540px) { width: 92%; }
 }
+#project-topper {
+  @include clearfix;
+  margin-bottom: lh();
+  margin-top: lh(-1);
+
+  @media (max-width: 768px) { margin-top: lh(-0.5) }
+
+  #project-cart {
+    float: right;
+  }
+}
 .back-top, .back-bottom { font-size: 0.8rem; }
 .back-top {
-  margin-top: lh(-1);
-  margin-bottom: lh();
-  @media (max-width: 768px) { margin-top: lh(-0.5) }
+  float: left;
 }
 .back-bottom {
   margin-top: lh();
@@ -204,6 +213,15 @@ header {
   }
 }
 
+#PPMiniCart {
+  li { margin: 0; }
+  button img {
+    width: auto;
+    display: inline;
+  }
+  .minicart-price { top: 0 !important; }
+}
+
 article {
   &.project {
     position: relative;
@@ -261,9 +279,7 @@ article {
 }
 
 #cart {
-  form {
-    float: right;
-  }
+  float: right;
 }
 
 .dot-break {
@@ -276,13 +292,12 @@ article {
   letter-spacing: 0.5em;
 }
 header#story-header {
+  margin-bottom: lh();
   h1 {
     font-size: 1.8rem;
     line-height: lh(1.5);
     font-weight: bold;
-    margin-bottom: lh();
   }
-  p { margin-bottom: lh(); }
 }
 
 #erik-and-ashley {
@@ -532,9 +547,8 @@ header#story-header {
   #book-contents {
     @include clearfix;
     margin: 0 lh(-2);
-    @media (max-width: 540px) {
-      margin: 0;
-    }
+    @media (max-width: 768px) { margin: 0 lh(-1); }
+    @media (max-width: 540px) { margin: 0; }
     img {
       width: 50%;
       float: left;

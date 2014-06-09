@@ -17,7 +17,7 @@ meta_keywords: front-end, frontend, ruby, javascript, comics, illustration, bike
     <section id="cart">
       <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
         <input type="hidden" name="cmd" value="_cart">
-        <input type="submit" name="submit" value="Cart">
+        <input type="submit" name="submit" value="Cart (0)">
       </form>
     </section>
   </header>
@@ -25,20 +25,7 @@ meta_keywords: front-end, frontend, ruby, javascript, comics, illustration, bike
     <header class="project-header">
       <h1 class="title"><a href="/sand-dune">Sand Dune</a></h1>
       <span class="date">May 2014</span>
-      <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="add" value="1">
-        <input type="hidden" name="business" value="">
-        <input type="hidden" name="item_name" value="Sand Dune">
-        <input type="hidden" name="amount" value="10">
-        <input type="hidden" name="shipping" value="3.00">
-        <input type="hidden" name="shipping2" value="1.00">
-        <input type="hidden" name="handling" value="0.00 ">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="return" value="">
-        <input type="hidden" name="undefined_quantity" value="1">
-        <input type="submit" name="submit" value="Add to Cart - $10">
-      </form>
+      {% include add_to_cart_button.html name="Sand Dune" amount="10.00" shipping="3.00" shipping2="0.50" submit="Add to Cart - $10" %}
     </header>
   </article>
   <article class="project magic-fridge illustration">

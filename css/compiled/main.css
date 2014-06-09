@@ -72,15 +72,26 @@ img, p, ul, ol, table, code, form {
     #main-section {
       width: 92%; } }
 
+#project-topper {
+  *zoom: 1;
+  margin-bottom: 1.618rem;
+  margin-top: -1.618rem; }
+  #project-topper:before, #project-topper:after {
+    display: table;
+    content: ""; }
+  #project-topper:after {
+    clear: both; }
+  @media (max-width: 768px) {
+    #project-topper {
+      margin-top: -0.809rem; } }
+  #project-topper #project-cart {
+    float: right; }
+
 .back-top, .back-bottom {
   font-size: 0.8rem; }
 
 .back-top {
-  margin-top: -1.618rem;
-  margin-bottom: 1.618rem; }
-  @media (max-width: 768px) {
-    .back-top {
-      margin-top: -0.809rem; } }
+  float: left; }
 
 .back-bottom {
   margin-top: 1.618rem;
@@ -197,6 +208,14 @@ header.project-header {
 header.text-header .title {
   font-weight: bold; }
 
+#PPMiniCart li {
+  margin: 0; }
+#PPMiniCart button img {
+  width: auto;
+  display: inline; }
+#PPMiniCart .minicart-price {
+  top: 0 !important; }
+
 article.project {
   position: relative;
   padding-left: 65px;
@@ -253,7 +272,7 @@ article.project {
       article.project:before {
         background-size: 30px auto; } }
 
-#cart form {
+#cart {
   float: right; }
 
 .dot-break {
@@ -265,13 +284,12 @@ article.project {
   color: #DBDBDB;
   letter-spacing: 0.5em; }
 
-header#story-header h1 {
-  font-size: 1.8rem;
-  line-height: 2.427rem;
-  font-weight: bold;
+header#story-header {
   margin-bottom: 1.618rem; }
-header#story-header p {
-  margin-bottom: 1.618rem; }
+  header#story-header h1 {
+    font-size: 1.8rem;
+    line-height: 2.427rem;
+    font-weight: bold; }
 
 #erik-and-ashley #main-section {
   max-width: 768px; }
@@ -531,6 +549,9 @@ header#story-header p {
     content: ""; }
   #profile-home #book-contents:after {
     clear: both; }
+  @media (max-width: 768px) {
+    #profile-home #book-contents {
+      margin: 0 -1.618rem; } }
   @media (max-width: 540px) {
     #profile-home #book-contents {
       margin: 0; } }
