@@ -14,14 +14,20 @@ meta_keywords: front-end, frontend, ruby, javascript, comics, illustration, bike
 </header>
 
 <section id="projects">
-  <nav class="tabs">
-    <a href="/" class="active">Projects</a>
-    <a href="http://schneiderik.tictail.com/">Store</a>
-  </nav>
+  <header class="projects-header">
+    <h1 class="title">Projects</h1>
+    <section id="cart">
+      <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="submit" name="submit" value="Cart (0)">
+      </form>
+    </section>
+  </header>
   <article class="project sand-dune comic">
     <header class="project-header">
       <h1 class="title"><a href="/sand-dune">Sand Dune</a></h1>
       <span class="date">May 2014</span>
+      {% include add_to_cart_button.html name="Sand Dune" amount="10.00" shipping="3.00" shipping2="0.50" submit="Add to Cart - $10" %}
     </header>
   </article>
   <article class="project magic-fridge illustration">
