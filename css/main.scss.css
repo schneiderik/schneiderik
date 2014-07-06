@@ -87,10 +87,6 @@ img, p, ul, ol, table, code, form {
   margin-top: lh(-1);
 
   @media (max-width: 768px) { margin-top: lh(-0.5) }
-
-  #project-cart {
-    float: right;
-  }
 }
 .back-top, .back-bottom { font-size: 0.8rem; }
 .back-top {
@@ -213,15 +209,6 @@ header {
   }
 }
 
-#PPMiniCart {
-  li { margin: 0; }
-  button img {
-    width: auto;
-    display: inline;
-  }
-  .minicart-price { top: 0 !important; }
-}
-
 article {
   &.project {
     position: relative;
@@ -276,10 +263,6 @@ article {
       @media (max-width: 540px) { background-size: 30px auto; }
     }
   }
-}
-
-#cart {
-  float: right;
 }
 
 .dot-break {

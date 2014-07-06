@@ -84,8 +84,6 @@ img, p, ul, ol, table, code, form {
   @media (max-width: 768px) {
     #project-topper {
       margin-top: -0.809rem; } }
-  #project-topper #project-cart {
-    float: right; }
 
 .back-top, .back-bottom {
   font-size: 0.8rem; }
@@ -208,14 +206,6 @@ header.project-header {
 header.text-header .title {
   font-weight: bold; }
 
-#PPMiniCart li {
-  margin: 0; }
-#PPMiniCart button img {
-  width: auto;
-  display: inline; }
-#PPMiniCart .minicart-price {
-  top: 0 !important; }
-
 article.project {
   position: relative;
   padding-left: 65px;
@@ -271,9 +261,6 @@ article.project {
     @media (max-width: 540px) {
       article.project:before {
         background-size: 30px auto; } }
-
-#cart {
-  float: right; }
 
 .dot-break {
   margin: 0.9708rem auto 2.2652rem;
