@@ -120,30 +120,19 @@ button, input[type=submit] {
   font-family: "Droid Serif";
   color: #222222;
   background-color: #FFF;
-  line-height: 1.618rem;
-  padding: 0 0.809rem;
+  font-size: 0.8em;
+  line-height: 1em;
+  padding: 0.2em 0.4045rem 0.2em;
   -webkit-box-shadow: inset 0px -2px 1px -1px #f2f2f2;
   -moz-box-shadow: inset 0px -2px 1px -1px #f2f2f2;
   box-shadow: inset 0px -2px 1px -1px #f2f2f2;
   background-image: linear-gradient(0deg, #eaeaea, white); }
-  button.link, input[type=submit].link {
-    border: none;
-    border-radius: 0;
-    display: inline;
-    padding: 0;
-    text-decoration: underline;
-    background-color: transparent;
-    line-height: 1.618rem;
-    color: #0000ee;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: 0 0 0 0 transparent;
-    -moz-box-shadow: 0 0 0 0 transparent;
-    box-shadow: 0 0 0 0 transparent;
-    background-image: none; }
-    button.link:visited, input[type=submit].link:visited {
-      color: #551a8b; }
-    button.link:active, input[type=submit].link:active {
-      color: #0000a2; }
+  button:active, input[type=submit]:active {
+    border-color: #316db8;
+    -webkit-box-shadow: inset 0 0 1px #c6d8ef;
+    -moz-box-shadow: inset 0 0 1px #c6d8ef;
+    box-shadow: inset 0 0 1px #c6d8ef;
+    background-image: linear-gradient(180deg, #c6d8ef, #89b0df 15%, #89b0df 49%, #4d87cf 53%, #89b0df 85%, #c6d8ef); }
 
 nav {
   *zoom: 1; }
