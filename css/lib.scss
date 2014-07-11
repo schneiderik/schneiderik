@@ -1,6 +1,20 @@
-$link:       #62968d;
-$link-hover: #345a53;
-$text:       #222;
+$text: #222;
+$muted: #bbb;
+$link: rgb(0, 0, 238);
+$visited: rgb(85, 26, 139);
+$active: darken(rgb(0, 0, 238), 15%);
+
+$line-height: 1.618rem;
+$fs: 137%;
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
+
+@function lh ($num:1, $root-variance:1) {
+  @if ($root-variance != 1) {
+    @return ($line-height / $root-variance) * $num;
+  } @else {
+    @return $line-height * $num;
+  }
+}
 
 @mixin prefixer ($property, $value,
                  $webkit: true,

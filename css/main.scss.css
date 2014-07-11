@@ -1,22 +1,6 @@
 @import "./reset.css";
 @import "./lib";
 
-$line-height: 1.618rem;
-$fs: 137%;
-$retina: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
-
-@function lh ($num:1, $root-variance:1) {
-  @if ($root-variance != 1) {
-    @return ($line-height / $root-variance) * $num;
-  } @else {
-    @return $line-height * $num;
-  }
-}
-
-$link: rgb(0, 0, 238);
-$visited: rgb(85, 26, 139);
-$active: darken(rgb(0, 0, 238), 15%);
-
 html {
   font-size: $fs;
   @media (min-width:768px) and (max-width:960px) { font-size: $fs * 0.93; }
@@ -92,10 +76,7 @@ img, p, ul, ol, table, code, form {
     float: right;
   }
 }
-.back-top, .back-bottom { font-size: 0.8rem; }
-.back-top {
-  float: left;
-}
+.back-top { float: left; }
 .back-bottom {
   margin-top: lh();
   text-align: center;
@@ -105,11 +86,42 @@ img, p, ul, ol, table, code, form {
 .hidden { display: none; }
 footer {
   &#main-footer {
-    font-size: 0.8rem;
     margin-top: lh(2);
     margin-bottom: lh();
     text-align: center;
-    color: #AAA;
+    color: $muted;
+  }
+}
+button, input[type=submit] {
+  -webkit-appearance: none;
+  border: 1px solid #BBB;
+  @include box-sizing(border-box);
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: baseline;
+  font-family: "Droid Serif";
+  color: $text;
+  background-color: #FFF;
+  line-height: lh();
+  padding: 0 lh(0.5);
+  @include box-shadow(inset 0px -2px 1px -1px #F2F2F2);
+  background-image: linear-gradient( 0deg, #EAEAEA, #FFF);
+
+  &.link {
+    border: none;
+    border-radius: 0;
+    display: inline;
+    padding: 0;
+    text-decoration: underline;
+    background-color: transparent;
+    line-height: lh();
+    color: $link;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:visited { color: $visited; }
+    &:active { color: $active; }
+    @include box-shadow(0 0 0 0 transparent);
+    background-image: none;
   }
 }
 nav {
@@ -186,8 +198,7 @@ header {
     border-bottom: 1px solid #efefef;
     @include clearfix;
     .title {
-      font-size: 0.8rem;
-      color: #AAA;
+      color: $muted;
       line-height: lh();
       float: left;
     }
@@ -196,13 +207,12 @@ header {
     margin-bottom: lh();
     .date {
       font-weight: normal;
-      color: #AAA;
-      font-size: 0.8rem;
+      color: $muted;
       line-height: lh();
       display: inline-block;
+      margin-right: lh(0.25);
     }
     form {
-      margin-left: lh(0.25);
       &, input { display: inline-block; }
     }
   }
@@ -278,9 +288,7 @@ article {
   }
 }
 
-#cart {
-  float: right;
-}
+#cart { float: right; }
 
 .dot-break {
   margin: lh(0.6) auto lh(1.4);
