@@ -2,14 +2,14 @@
 <html>
   {% include head.html %}
 
-  <body id="{{ page.scope }}">
-    <section id="main-section">
+  <body id="index">
+    <section>
       {{ content }}
     </section>
-    <footer id="main-footer">
+    <footer>
       &copy; 2011 - 2015 Erik Schneider
     </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
-    <script src="/js/main.js"></script>
+
+    {% include page_close.html %}
   </body>
 </html>
