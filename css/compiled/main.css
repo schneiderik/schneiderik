@@ -88,16 +88,16 @@ body > section {
     @media (max-width: 768px) {
       body > section > header p {
         padding-left: 90px; }
-      body > section > header .portrait {
+      body > section > header img {
         width: 75px; } }
     @media (max-width: 540px) {
       body > section > header p {
         padding-left: 0px; }
-      body > section > header .portrait {
+      body > section > header img {
         position: static;
         margin: 0 auto 1.618rem; } }
 body > footer {
-  width: 768px;
+  max-width: 768px;
   margin: 3.236rem auto 1.618rem;
   text-align: center; }
   body > footer p {
@@ -107,9 +107,6 @@ body > footer {
     clear: both;
     margin: 1.618rem 0;
     text-align: center; }
-    @media (max-width: 768px) {
-      body > footer a {
-        margin-bottom: -0.809rem; } }
 
 .projects-header {
   margin-bottom: 1.618rem;
@@ -164,9 +161,9 @@ button, input[type=submit] {
   background-image: linear-gradient(0deg, #eaeaea, white); }
   button:active, input[type=submit]:active {
     border-color: #316db8;
-    -webkit-box-shadow: inset 0 0 1px #c6d8ef;
-    -moz-box-shadow: inset 0 0 1px #c6d8ef;
-    box-shadow: inset 0 0 1px #c6d8ef;
+    -webkit-box-shadow: inset 1 0 1px #c6d8ef;
+    -moz-box-shadow: inset 1 0 1px #c6d8ef;
+    box-shadow: inset 1 0 1px #c6d8ef;
     background-image: linear-gradient(180deg, #c6d8ef, #89b0df 15%, #89b0df 49%, #4d87cf 53%, #89b0df 85%, #c6d8ef); }
 
 #PPMiniCart li {
@@ -188,36 +185,12 @@ article.project {
       padding-left: 40px; } }
   article.project.hidden {
     display: none; }
-  article.project.zine:before {
+  article.project.comic:before {
     background-image: url("/images/zine.jpg");
     height: 46px; }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.zine:before {
-        background-image: url("/images/zine@2x.jpg"); } }
-  article.project.illustration:before {
-    background-image: url("/images/illustration.jpg");
-    height: 46px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.illustration:before {
-        background-image: url("/images/illustration@2x.jpg"); } }
-  article.project.game:before {
-    background-image: url("/images/game.jpg");
-    height: 46px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.game:before {
-        background-image: url("/images/game@2x.jpg"); } }
-  article.project.comic:before {
-    background-image: url("/images/comic.jpg");
-    height: 40px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       article.project.comic:before {
-        background-image: url("/images/comic@2x.jpg"); } }
-  article.project.code:before {
-    background-image: url("/images/code.jpg");
-    height: 42px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-      article.project.code:before {
-        background-image: url("/images/code@2x.jpg"); } }
+        background-image: url("/images/zine@2x.jpg"); } }
   article.project:before {
     content: " ";
     width: 50px;
@@ -235,36 +208,6 @@ article.project {
 
 #cart {
   float: right; }
-
-#to-do .chapter {
-  *zoom: 1;
-  margin: 0 -6%; }
-  #to-do .chapter:before, #to-do .chapter:after {
-    display: table;
-    content: ""; }
-  #to-do .chapter:after {
-    clear: both; }
-  @media (max-width: 540px) {
-    #to-do .chapter {
-      margin: 0; } }
-  #to-do .chapter img {
-    width: 51.1%;
-    max-width: 500px;
-    float: left;
-    margin: 0 -0.6% 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 540px) {
-      #to-do .chapter img {
-        width: 100%;
-        margin: 0; } }
-    #to-do .chapter img.center {
-      float: none;
-      clear: both;
-      max-width: 320px;
-      margin: 0 auto 0.4045rem; }
 
 body#project nav {
   *zoom: 1;
@@ -405,3 +348,32 @@ body#project #toucher section {
         margin-right: auto !important;
         float: none;
         width: 88%; } }
+body#project #to-do section {
+  *zoom: 1;
+  margin: 0 -6%; }
+  body#project #to-do section:before, body#project #to-do section:after {
+    display: table;
+    content: ""; }
+  body#project #to-do section:after {
+    clear: both; }
+  @media (max-width: 540px) {
+    body#project #to-do section {
+      margin: 0; } }
+  body#project #to-do section img {
+    width: 51.1%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -0.6% 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      body#project #to-do section img {
+        width: 100%;
+        margin: 0; } }
+    body#project #to-do section img.center {
+      float: none;
+      clear: both;
+      max-width: 320px;
+      margin: 0 auto 0.4045rem; }

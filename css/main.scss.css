@@ -83,11 +83,11 @@ body {
       }
       @media (max-width: 768px) {
         p { padding-left: 90px; }
-        .portrait { width: 75px; }
+        img { width: 75px; }
       }
       @media (max-width: 540px) {
         p { padding-left: 0px; }
-        .portrait {
+        img {
           position: static;
           margin: 0 auto lh();
         }
@@ -95,7 +95,7 @@ body {
     }
   }
   & > footer {
-    width: 768px;
+    max-width: 768px;
     margin: lh(2) auto lh();
     text-align: center;
 
@@ -108,7 +108,6 @@ body {
       clear: both;
       margin: lh() 0;
       text-align: center;
-      @media (max-width: 768px) { margin-bottom: lh(-0.5) }
     }
   }
 }
@@ -166,7 +165,7 @@ button, input[type=submit] {
 
   &:active {
     border-color: darken($blue, 10%);
-    @include box-shadow(inset 0 0 1px lighten($blue, 30%));
+    @include box-shadow(inset 1 0 1px lighten($blue, 30%));
     background-image: linear-gradient( 180deg, lighten($blue, 30%), lighten($blue, 15%) 15%, lighten($blue, 15%) 49%, $blue 53%, lighten($blue, 15%) 85%, lighten($blue, 30%));
   }
 }
@@ -187,39 +186,11 @@ article {
     @include box-sizing(border-box);
     @media (max-width: 540px) { padding-left: 40px; }
     &.hidden { display: none; }
-    &.zine {
+    &.comic {
       &:before {
         background-image: url('/images/zine.jpg');
         height: 46px;
         @media #{$retina} { background-image: url('/images/zine@2x.jpg'); }
-      }
-    }
-    &.illustration {
-      &:before {
-        background-image: url('/images/illustration.jpg');
-        height: 46px;
-        @media #{$retina} { background-image: url('/images/illustration@2x.jpg'); }
-      }
-    }
-    &.game {
-      &:before {
-        background-image: url('/images/game.jpg');
-        height: 46px;
-        @media #{$retina} { background-image: url('/images/game@2x.jpg'); }
-      }
-    }
-    &.comic {
-      &:before {
-        background-image: url('/images/comic.jpg');
-        height: 40px;
-        @media #{$retina} { background-image: url('/images/comic@2x.jpg'); }
-      }
-    }
-    &.code {
-      &:before {
-        background-image: url('/images/code.jpg');
-        height: 42px;
-        @media #{$retina} { background-image: url('/images/code@2x.jpg'); }
       }
     }
     &:before {
@@ -237,34 +208,6 @@ article {
 }
 
 #cart { float: right; }
-
-#to-do {
-  .chapter {
-    @include clearfix;
-    margin: 0 -6%;
-    @media (max-width: 540px) {
-      margin: 0;
-    }
-    img {
-      width: 51.1%;
-      max-width: 500px;
-      float: left;
-      margin: 0 -0.6% 0;
-      padding: 0;
-      @include box-sizing(border-box);
-      @media (max-width: 540px) {
-        width: 100%;
-        margin: 0;
-      }
-      &.center {
-        float: none;
-        clear: both;
-        max-width: 320px;
-        margin: 0 auto lh(0.25);
-      }
-    }
-  }
-}
 
 body#project {
   nav {
@@ -434,6 +377,34 @@ body#project {
           margin-right: auto !important;
           float: none;
           width: 88%;
+        }
+      }
+    }
+  }
+
+  #to-do {
+    section {
+      @include clearfix;
+      margin: 0 -6%;
+      @media (max-width: 540px) {
+        margin: 0;
+      }
+      img {
+        width: 51.1%;
+        max-width: 500px;
+        float: left;
+        margin: 0 -0.6% 0;
+        padding: 0;
+        @include box-sizing(border-box);
+        @media (max-width: 540px) {
+          width: 100%;
+          margin: 0;
+        }
+        &.center {
+          float: none;
+          clear: both;
+          max-width: 320px;
+          margin: 0 auto lh(0.25);
         }
       }
     }
