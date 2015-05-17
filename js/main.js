@@ -55,7 +55,7 @@ var tabClick = function(e) {
 }
 
 var updateCart = function() {
-  var cart = document.querySelectorAll('#cart input[type="submit"], #project-topper input[type="submit"]')[0];
+  var cart = document.querySelectorAll('#cart input[type="submit"], nav input[type="submit"]')[0];
 
   var itemCount = 0
   eachItem(paypal.minicart.cart.items(), function(item) {

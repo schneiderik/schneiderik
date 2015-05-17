@@ -60,52 +60,87 @@ img, p, ul, ol, table, code, form {
   img:last-child, p:last-child, ul:last-child, ol:last-child, table:last-child, code:last-child, form:last-child {
     margin-bottom: 0px; }
 
-#main-section {
+body > section {
   width: 80%;
   max-width: 768px;
   margin: 3.236rem auto; }
   @media (max-width: 768px) {
-    #main-section {
+    body > section {
       width: 86%;
       margin: 1.618rem auto; } }
   @media (max-width: 540px) {
-    #main-section {
+    body > section {
       width: 92%; } }
+  body > section > header {
+    position: relative;
+    margin-bottom: 1.618rem; }
+    body > section > header p {
+      padding-left: 120px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    body > section > header img {
+      width: 100px;
+      border-radius: 50px;
+      position: absolute;
+      top: 0.2427rem;
+      left: -0.1618rem; }
+    @media (max-width: 768px) {
+      body > section > header p {
+        padding-left: 90px; }
+      body > section > header .portrait {
+        width: 75px; } }
+    @media (max-width: 540px) {
+      body > section > header p {
+        padding-left: 0px; }
+      body > section > header .portrait {
+        position: static;
+        margin: 0 auto 1.618rem; } }
+body > footer {
+  width: 768px;
+  margin: 3.236rem auto 1.618rem;
+  text-align: center; }
+  body > footer p {
+    color: #bbbbbb; }
+  body > footer a {
+    display: inline-block;
+    clear: both;
+    margin: 1.618rem 0;
+    text-align: center; }
+    @media (max-width: 768px) {
+      body > footer a {
+        margin-bottom: -0.809rem; } }
 
-#project-topper {
-  *zoom: 1;
+.projects-header {
   margin-bottom: 1.618rem;
-  margin-top: -1.618rem; }
-  #project-topper:before, #project-topper:after {
+  border-bottom: 1px solid #efefef;
+  *zoom: 1; }
+  .projects-header:before, .projects-header:after {
     display: table;
     content: ""; }
-  #project-topper:after {
+  .projects-header:after {
     clear: both; }
-  @media (max-width: 768px) {
-    #project-topper {
-      margin-top: -0.809rem; } }
-  #project-topper #project-cart {
-    float: right; }
+  .projects-header .title {
+    color: #bbbbbb;
+    line-height: 1.618rem;
+    float: left; }
 
-.back-top {
-  float: left; }
+.project-header {
+  margin-bottom: 1.618rem; }
+  .project-header .date {
+    font-weight: normal;
+    color: #bbbbbb;
+    line-height: 1.618rem;
+    display: inline-block;
+    margin-right: 0.4045rem; }
+  .project-header form, .project-header form input {
+    display: inline-block; }
 
-.back-bottom {
-  margin-top: 1.618rem;
-  text-align: center;
-  margin-bottom: -1.618rem; }
-  @media (max-width: 768px) {
-    .back-bottom {
-      margin-bottom: -0.809rem; } }
+.text-header .title {
+  font-weight: bold; }
 
 .hidden {
   display: none; }
-
-footer#main-footer {
-  margin-top: 3.236rem;
-  margin-bottom: 1.618rem;
-  text-align: center;
-  color: #bbbbbb; }
 
 button, input[type=submit] {
   -webkit-appearance: none;
@@ -133,100 +168,6 @@ button, input[type=submit] {
     -moz-box-shadow: inset 0 0 1px #c6d8ef;
     box-shadow: inset 0 0 1px #c6d8ef;
     background-image: linear-gradient(180deg, #c6d8ef, #89b0df 15%, #89b0df 49%, #4d87cf 53%, #89b0df 85%, #c6d8ef); }
-
-nav {
-  *zoom: 1; }
-  nav:before, nav:after {
-    display: table;
-    content: ""; }
-  nav:after {
-    clear: both; }
-  nav.tabs {
-    margin-bottom: 1.618rem;
-    padding-left: 2px;
-    border-bottom: 1px solid #dbdbdb; }
-    nav.tabs a {
-      position: relative;
-      text-decoration: none;
-      font-size: 0.8rem;
-      color: #CCC;
-      line-height: 1.618rem;
-      float: left;
-      padding: 0 0.809rem;
-      margin: 0 2px -1px;
-      background: #FFF;
-      border: 1px solid #efefef;
-      border-radius: 3px 3px 0 0;
-      z-index: 1; }
-      nav.tabs a.active {
-        border-color: #DBDBDB;
-        border-bottom-color: #FFF;
-        color: #333;
-        cursor: default;
-        z-index: 2; }
-      nav.tabs a:not(.active) {
-        border-color: #EFEFEF;
-        border-bottom-color: #DBDBDB; }
-        nav.tabs a:not(.active):hover {
-          color: #AAA;
-          border-color: #E2E2E2;
-          border-bottom-color: #DBDBDB; }
-
-.tab-content {
-  display: none; }
-  .tab-content.active {
-    display: block; }
-
-header.page-header {
-  position: relative;
-  margin-bottom: 1.618rem; }
-  header.page-header p {
-    padding-left: 120px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  header.page-header .portrait {
-    width: 100px;
-    border-radius: 50px;
-    position: absolute;
-    top: 0.2427rem;
-    left: -0.1618rem; }
-  @media (max-width: 768px) {
-    header.page-header p {
-      padding-left: 90px; }
-    header.page-header .portrait {
-      width: 75px; } }
-  @media (max-width: 540px) {
-    header.page-header p {
-      padding-left: 0px; }
-    header.page-header .portrait {
-      position: static;
-      margin: 0 auto 1.618rem; } }
-header.projects-header {
-  margin-bottom: 1.618rem;
-  border-bottom: 1px solid #efefef;
-  *zoom: 1; }
-  header.projects-header:before, header.projects-header:after {
-    display: table;
-    content: ""; }
-  header.projects-header:after {
-    clear: both; }
-  header.projects-header .title {
-    color: #bbbbbb;
-    line-height: 1.618rem;
-    float: left; }
-header.project-header {
-  margin-bottom: 1.618rem; }
-  header.project-header .date {
-    font-weight: normal;
-    color: #bbbbbb;
-    line-height: 1.618rem;
-    display: inline-block;
-    margin-right: 0.4045rem; }
-  header.project-header form, header.project-header form input {
-    display: inline-block; }
-header.text-header .title {
-  font-weight: bold; }
 
 #PPMiniCart li {
   margin: 0; }
@@ -295,242 +236,6 @@ article.project {
 #cart {
   float: right; }
 
-.dot-break {
-  margin: 0.9708rem auto 2.2652rem;
-  width: 200px;
-  display: block;
-  text-align: center;
-  clear: both;
-  color: #DBDBDB;
-  letter-spacing: 0.5em; }
-
-header#story-header {
-  margin-bottom: 1.618rem; }
-  header#story-header h1 {
-    font-size: 1.8rem;
-    line-height: 2.427rem;
-    font-weight: bold; }
-
-#erik-and-ashley #main-section {
-  max-width: 768px; }
-#erik-and-ashley .circle {
-  margin: 2.427rem auto;
-  max-width: 400px;
-  width: 80%; }
-#erik-and-ashley #chapter-1, #erik-and-ashley #chapter-2 {
-  *zoom: 1;
-  margin: 0 -0.2427rem; }
-  #erik-and-ashley #chapter-1:before, #erik-and-ashley #chapter-1:after, #erik-and-ashley #chapter-2:before, #erik-and-ashley #chapter-2:after {
-    display: table;
-    content: ""; }
-  #erik-and-ashley #chapter-1:after, #erik-and-ashley #chapter-2:after {
-    clear: both; }
-  #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
-    width: 25%;
-    max-width: 210px;
-    max-height: 290px;
-    float: left;
-    margin: 0;
-    padding: 0 0 0.4045rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 650px) {
-      #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
-        width: 33%; } }
-    @media (max-width: 460px) {
-      #erik-and-ashley #chapter-1 img, #erik-and-ashley #chapter-2 img {
-        width: 50%; } }
-
-#quiet-fishing-village #main-section {
-  max-width: 768px; }
-#quiet-fishing-village .chapter {
-  *zoom: 1;
-  margin: 0 -2%; }
-  #quiet-fishing-village .chapter:before, #quiet-fishing-village .chapter:after {
-    display: table;
-    content: ""; }
-  #quiet-fishing-village .chapter:after {
-    clear: both; }
-  #quiet-fishing-village .chapter img {
-    width: 51.8%;
-    max-width: 500px;
-    float: left;
-    margin: 0 -1% 0.4045rem;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 540px) {
-      #quiet-fishing-village .chapter img {
-        width: 100%;
-        margin: 0 0 0.4045rem; } }
-
-#dailies-2011 #main-section {
-  max-width: 768px; }
-#dailies-2011 .chapter {
-  *zoom: 1;
-  margin: 0 -1% 1.618rem; }
-  #dailies-2011 .chapter:before, #dailies-2011 .chapter:after {
-    display: table;
-    content: ""; }
-  #dailies-2011 .chapter:after {
-    clear: both; }
-  #dailies-2011 .chapter img {
-    width: 53.9%;
-    max-width: 500px;
-    float: left;
-    margin: 0 -2%;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 540px) {
-      #dailies-2011 .chapter img {
-        width: 100%;
-        margin: 0 0 -0.2427rem; } }
-    #dailies-2011 .chapter img.wide {
-      width: 104%;
-      max-width: 1000px; }
-      @media (max-width: 540px) {
-        #dailies-2011 .chapter img.wide {
-          width: 94.5%;
-          margin: 0 3%; } }
-    #dailies-2011 .chapter img.narrow {
-      width: 29%;
-      max-width: 250px; }
-      @media (max-width: 540px) {
-        #dailies-2011 .chapter img.narrow {
-          width: 57%;
-          margin: 0 auto;
-          float: none; } }
-
-#autobiographic-fanfiction #main-section {
-  max-width: 768px; }
-#autobiographic-fanfiction .chapter {
-  *zoom: 1;
-  margin: 0 -0.25%; }
-  #autobiographic-fanfiction .chapter:before, #autobiographic-fanfiction .chapter:after {
-    display: table;
-    content: ""; }
-  #autobiographic-fanfiction .chapter:after {
-    clear: both; }
-  #autobiographic-fanfiction .chapter img {
-    width: 49.5%;
-    max-width: 500px;
-    float: left;
-    margin: 0 0.25% 0.4045rem;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 540px) {
-      #autobiographic-fanfiction .chapter img {
-        width: 100%;
-        margin: 0 0 0.4045rem; } }
-
-#nice-tat #main-section {
-  max-width: 768px; }
-#nice-tat .chapter {
-  *zoom: 1;
-  margin: 0 -0.5%; }
-  #nice-tat .chapter:before, #nice-tat .chapter:after {
-    display: table;
-    content: ""; }
-  #nice-tat .chapter:after {
-    clear: both; }
-  #nice-tat .chapter img {
-    width: 50%;
-    max-width: 500px;
-    float: left;
-    margin: 0 0 0.4045rem;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-    @media (max-width: 540px) {
-      #nice-tat .chapter img {
-        width: 100%;
-        margin: 0 0 0.4045rem; } }
-    #nice-tat .chapter img.center {
-      float: none;
-      margin: 0 auto 0.4045rem; }
-
-#whatever-happens #main-section {
-  max-width: 768px; }
-#whatever-happens .chapter {
-  *zoom: 1;
-  margin: 0 -1.1%; }
-  #whatever-happens .chapter:before, #whatever-happens .chapter:after {
-    display: table;
-    content: ""; }
-  #whatever-happens .chapter:after {
-    clear: both; }
-  #whatever-happens .chapter img {
-    width: 52.1%;
-    max-width: 500px;
-    float: left;
-    margin: 0 -1.1% -1%;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-  @media (max-width: 700px) {
-    #whatever-happens .chapter {
-      margin: 0 -4%; }
-      #whatever-happens .chapter img {
-        width: 100%;
-        max-width: 540px;
-        margin: 0 auto -1%;
-        float: none; } }
-
-#toucher #main-section {
-  max-width: 768px; }
-#toucher img {
-  width: 103%;
-  max-width: 800px;
-  margin: 0 -1.5%;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-#thirty-days-of-comics-2013 span.date {
-  color: #AAA;
-  font-size: 0.8rem; }
-#thirty-days-of-comics-2013 .comic {
-  margin-bottom: 1.618rem; }
-
-#thanksgiving-in-paris .text-header {
-  margin: 1.618rem 0 0; }
-  #thanksgiving-in-paris .text-header + img {
-    width: 103%;
-    margin: -1% -1.5% 0.809rem;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-#thanksgiving-in-paris .photos {
-  width: 100%;
-  *zoom: 1; }
-  #thanksgiving-in-paris .photos:before, #thanksgiving-in-paris .photos:after {
-    display: table;
-    content: ""; }
-  #thanksgiving-in-paris .photos:after {
-    clear: both; }
-  #thanksgiving-in-paris .photos img {
-    width: 50%;
-    float: left;
-    max-width: 400px; }
-    #thanksgiving-in-paris .photos img.wide {
-      width: 100%;
-      max-width: 800px; }
-    @media (max-width: 540px) {
-      #thanksgiving-in-paris .photos img {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto; } }
-
 #to-do .chapter {
   *zoom: 1;
   margin: 0 -6%; }
@@ -561,29 +266,142 @@ header#story-header {
       max-width: 320px;
       margin: 0 auto 0.4045rem; }
 
-#profile-home #book-contents {
+body#project nav {
   *zoom: 1;
-  margin: 0 -3.236rem; }
-  #profile-home #book-contents:before, #profile-home #book-contents:after {
+  margin-bottom: 1.618rem;
+  margin-top: -1.618rem; }
+  body#project nav:before, body#project nav:after {
     display: table;
     content: ""; }
-  #profile-home #book-contents:after {
+  body#project nav:after {
     clear: both; }
   @media (max-width: 768px) {
-    #profile-home #book-contents {
-      margin: 0 -1.618rem; } }
-  @media (max-width: 540px) {
-    #profile-home #book-contents {
-      margin: 0; } }
-  #profile-home #book-contents img {
-    width: 50%;
+    body#project nav {
+      margin-top: -0.809rem; } }
+  body#project nav a {
+    float: left; }
+  body#project nav form {
+    float: right; }
+body#project > section > header {
+  margin-bottom: 1.618rem; }
+  body#project > section > header h1 {
+    font-size: 1.8rem;
+    line-height: 2.427rem;
+    font-weight: bold; }
+body#project > section > section {
+  max-width: 768px;
+  margin-top: 1.618rem; }
+  body#project > section > section > header {
+    padding: 1.618rem 0;
+    text-align: center; }
+    body#project > section > section > header h1 {
+      font-size: 1.4rem;
+      line-height: 1.618rem;
+      font-weight: bold; }
+  body#project > section > section + section {
+    margin-top: 4.854rem; }
+  body#project > section > section > section {
+    *zoom: 1; }
+    body#project > section > section > section:before, body#project > section > section > section:after {
+      display: table;
+      content: ""; }
+    body#project > section > section > section:after {
+      clear: both; }
+    body#project > section > section > section + section:before {
+      content: '.....';
+      margin: 0.9708rem auto 2.2652rem;
+      height: 1.618rem;
+      width: 200px;
+      display: block;
+      text-align: center;
+      clear: both;
+      color: #DBDBDB;
+      letter-spacing: 0.5em; }
+body#project #quiet-fishing-village section {
+  margin: 0 -2%; }
+  body#project #quiet-fishing-village section img {
+    width: 51.8%;
+    max-width: 500px;
     float: left;
-    margin: 0;
-    padding: 0 0.809rem 1.618rem;
+    margin: 0 -1% 0.4045rem;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
     @media (max-width: 540px) {
-      #profile-home #book-contents img {
+      body#project #quiet-fishing-village section img {
         width: 100%;
-        margin: 0; } }
+        margin: 0 0 0.4045rem; } }
+body#project #whatever-happens section {
+  margin: 0 -1.1%; }
+  body#project #whatever-happens section img {
+    width: 52.1%;
+    max-width: 500px;
+    float: left;
+    margin: 0 -1.1% -1%;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  @media (max-width: 700px) {
+    body#project #whatever-happens section {
+      margin: 0 -4%; }
+      body#project #whatever-happens section img {
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto -1%;
+        float: none; } }
+body#project #autobiographic-fanfiction section {
+  margin: 0 -0.25%; }
+  body#project #autobiographic-fanfiction section img {
+    width: 49.5%;
+    max-width: 500px;
+    float: left;
+    margin: 0 0.25% 0.4045rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      body#project #autobiographic-fanfiction section img {
+        width: 100%;
+        margin: 0 0 0.4045rem; } }
+body#project #nice-tat section {
+  margin: 0 -0.5%; }
+  body#project #nice-tat section img {
+    width: 50%;
+    max-width: 500px;
+    float: left;
+    margin: 0 0 0.4045rem;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media (max-width: 540px) {
+      body#project #nice-tat section img {
+        width: 100%;
+        margin: 0 0 0.4045rem; } }
+    body#project #nice-tat section img.center {
+      float: none;
+      margin: 0 auto 0.4045rem; }
+body#project #toucher section {
+  margin: 0 -8%; }
+  body#project #toucher section img {
+    padding: 0;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 48%;
+    max-width: 800px;
+    margin: 0 0 1.618rem; }
+    body#project #toucher section img:nth-child(odd) {
+      margin-left: 2%; }
+    body#project #toucher section img:nth-child(odd) {
+      margin-right: 2%; }
+    @media (max-width: 768px) {
+      body#project #toucher section img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none;
+        width: 88%; } }
