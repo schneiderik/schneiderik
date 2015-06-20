@@ -382,6 +382,37 @@ body#project {
     }
   }
 
+  #nordhouse {
+    section {
+      margin: 0 -10%;
+      width: 120%;
+      img {
+        padding: 0;
+        float: left;
+        @include box-sizing(border-box);
+        width: 50%;
+        max-width: 800px;
+        margin: 0 0 lh();
+
+        &.center {
+          float: none;
+          margin: 0 auto lh(0.25);
+        }
+      }
+      @media (max-width: 769px) {
+        margin: 0;
+        width: 100%;
+
+        img {
+          margin-left: auto !important;
+          margin-right: auto !important;
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+
   #to-do {
     section {
       @include clearfix;

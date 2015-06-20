@@ -348,6 +348,30 @@ body#project #toucher section {
         margin-right: auto !important;
         float: none;
         width: 88%; } }
+body#project #nordhouse section {
+  margin: 0 -10%;
+  width: 120%; }
+  body#project #nordhouse section img {
+    padding: 0;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    max-width: 800px;
+    margin: 0 0 1.618rem; }
+    body#project #nordhouse section img.center {
+      float: none;
+      margin: 0 auto 0.4045rem; }
+  @media (max-width: 769px) {
+    body#project #nordhouse section {
+      margin: 0;
+      width: 100%; }
+      body#project #nordhouse section img {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none;
+        width: 100%; } }
 body#project #to-do section {
   *zoom: 1;
   margin: 0 -6%; }
