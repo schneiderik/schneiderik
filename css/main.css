@@ -83,7 +83,7 @@ body > section {
       width: 100px;
       border-radius: 50px;
       position: absolute;
-      top: 0.2427rem;
+      top: 1rem;
       left: -0.1618rem; }
     @media (max-width: 768px) {
       body > section > header p {
