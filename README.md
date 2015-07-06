@@ -1,4 +1,1 @@
-schneiderik
-===========
-
-Projects of Erik Schneider
+The website of Erik Schneider
