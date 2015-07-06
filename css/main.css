@@ -1,98 +1,98 @@
 @import url(./reset.css);
 html {
-  font-size: 137%; }
-  @media (min-width: 768px) and (max-width: 960px) {
-    html {
-      font-size: 127.41%; } }
-  @media (min-width: 540px) and (max-width: 768px) {
-    html {
-      font-size: 113.71%; } }
-  @media (max-width: 540px) {
-    html {
-      font-size: 95.9%; } }
+  font-size: 137%;
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  html {
+    font-size: 127.41%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 768px) {
+  html {
+    font-size: 113.71%;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 95.9%;
+  }
+}
 
 body {
   font-family: "Droid Serif";
   color: #222222;
   background: #FFF;
-  line-height: 1.618rem; }
+  line-height: 1.618rem;
+}
 
 img {
   display: block;
-  width: 100%; }
-  img.circle {
-    border-radius: 50%; }
-  img.centered {
-    width: auto;
-    margin-left: auto;
-    margin-right: auto; }
+  width: 100%;
+}
+
+img.circle {
+  border-radius: 50%;
+}
 
 div {
-  line-height: 1.618rem; }
+  line-height: 1.618rem;
+}
 
 p {
   max-width: 768px;
-  line-height: 1.618rem; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  line-height: 1.618rem; }
-
-ul, ol {
   line-height: 1.618rem;
-  margin-left: 1.618rem; }
-  ul li, ol li {
-    margin-top: 1.618rem; }
-  ul li:first-child, ol li:first-child {
-    margin-top: 1.618rem; }
+}
 
 a {
   line-height: 1.618rem;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-  a:visited {
-    color: #551a8b; }
-  a:active {
-    color: #0000a2; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:active {
+  color: #0000a2;
+}
 
 img, p, ul, ol, table, code, form {
   line-height: 1.618rem;
-  margin-bottom: 1.618rem; }
-  img:last-child, p:last-child, ul:last-child, ol:last-child, table:last-child, code:last-child, form:last-child {
-    margin-bottom: 0px; }
+  margin-bottom: 1.618rem;
+}
+
+img:last-child, p:last-child, ul:last-child, ol:last-child, table:last-child, code:last-child, form:last-child {
+  margin-bottom: 0px;
+}
 
 body > section {
   width: 80%;
   max-width: 768px;
-  margin: 3.236rem auto; }
-  @media (max-width: 768px) {
-    body > section {
-      width: 86%;
-      margin: 1.618rem auto; } }
-  @media (max-width: 540px) {
-    body > section {
-      width: 92%; } }
-  body > section > header {
-    position: relative;
-    margin-bottom: 1.618rem; }
-    body > section > header p {
-      padding-left: 120px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-    body > section > header img {
-      width: 100px;
-      border-radius: 50px;
-      position: absolute;
-      top: 1rem;
-      left: -0.1618rem; }
-    @media (max-width: 768px) {
-      body > section > header p {
-        padding-left: 90px; }
-      body > section > header img {
-        width: 75px; } }
-    @media (max-width: 540px) {
-      body > section > header p {
-        padding-left: 0px; }
-      body > section > header img {
-        position: static;
-        margin: 0 auto 1.618rem; } }
+  margin: 3.236rem auto;
+}
+
+@media (max-width: 768px) {
+  body > section {
+    width: 86%;
+    margin: 1.618rem auto;
+  }
+}
+
+@media (max-width: 540px) {
+  body > section {
+    width: 92%;
+  }
+}
+
+body > section > header {
+  position: relative;
+  margin-bottom: 1.618rem;
+}
+
+body > section > header img {
+  width: 100px;
+  margin: 0 auto 1.618rem;
+}
