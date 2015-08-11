@@ -78,6 +78,24 @@ body > section > header img {
   width: 100px;
 }
 
+.links {
+  color: #999;
+  margin-top: -0.809rem;
+}
+
+.links a,
+.links a:visited:hover {
+  color: #999;
+}
+
+.links a:hover {
+  color: #666;
+}
+
+.links a:visited {
+  color: #ccc;
+}
+
 @media (min-width: 768px) and (max-width: 960px) {
   html {
     font-size: 127.41%;
