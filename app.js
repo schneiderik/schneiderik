@@ -20,10 +20,6 @@ app.get('/to-do', function(request, response) {
     response.sendfile(__dirname + '/public/to-do.html');
 });
 
-app.get('/nice-tat', function(request, response) {
-    response.sendfile(__dirname + '/public/nice-tat.html');
-});
-
 app.get('/autobiographic-fanfiction', function(request, response) {
     response.sendfile(__dirname + '/public/autobiographic-fanfiction.html');
 })
