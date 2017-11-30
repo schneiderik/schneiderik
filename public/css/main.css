@@ -159,7 +159,11 @@ body > section {
   }
 
   .page-header__image {
-    margin-bottom: 1.618rem;
+    margin: 0 0 1.618rem;
+  }
+
+  .page-header__content {
+    margin: 0;
   }
 }
 
